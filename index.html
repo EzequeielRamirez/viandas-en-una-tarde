@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viandas en una Tarde · Las viandas de la semana, en una tarde</title>
+<meta name="description" content="Guía digital con el método de las 2 tandas: menús de 4 semanas, listas de compras y planillas para completar en el celular. Con freidora de aire u horno.">
+<style>
+  :root{--terra:#C2452D;--terra-d:#A63923;--olive:#4F6B3A;--cream:#FBF5EA;--ink:#2B2420;--soft:#F3E9D7;--line:#E5D6BE;--muted:#6b5d52}
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;overflow-wrap:anywhere;background:var(--cream);color:var(--ink);font:17px/1.55 "Avenir Next","Helvetica Neue",Arial,sans-serif;-webkit-text-size-adjust:100%;padding-bottom:78px}
+  img{max-width:100%;height:auto;display:block}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15;margin:0 0 12px}
+  h1{font-size:34px}h2{font-size:28px}h3{font-size:20px}
+  p{margin:0 0 12px}
+  .wrap{width:100%;max-width:640px;margin:0 auto;padding:0 18px}
+  section{padding:34px 0}
+  .alt{background:var(--soft)}
+  .kicker{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800;color:var(--terra);margin-bottom:8px}
+  .top{background:var(--olive);color:#fff;text-align:center;font-size:13px;font-weight:700;padding:9px 12px}
+  .btn{display:block;width:100%;text-align:center;background:var(--terra);color:#fff;text-decoration:none;font-weight:800;font-size:18px;padding:17px 14px;border-radius:14px;box-shadow:0 6px 0 var(--terra-d);margin:18px 0 10px}
+  .btn:active{transform:translateY(3px);box-shadow:0 3px 0 var(--terra-d)}
+  .micro{font-size:13px;color:var(--muted);text-align:center;margin:0}
+  .hero{padding-top:22px}
+  .hero .cover{border-radius:16px;box-shadow:0 18px 40px rgba(80,40,20,.3);margin:20px auto 0;max-width:330px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 0;padding:0;list-style:none}
+  .chips li{background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:7px 12px;font-size:14px;font-weight:700}
+  .cards{display:grid;gap:12px;margin-top:16px}
+  .card{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px}
+  .card b{display:block;margin-bottom:4px}
+  .quote{border-left:5px solid var(--terra);background:#fff;border-radius:0 14px 14px 0;padding:14px 16px;font-style:italic}
+  .steps{counter-reset:s;list-style:none;padding:0;margin:16px 0 0;display:grid;gap:12px}
+  .steps li{counter-increment:s;position:relative;background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px 16px 16px 62px}
+  .steps li:before{content:counter(s);position:absolute;left:16px;top:14px;width:34px;height:34px;border-radius:50%;background:var(--olive);color:#fff;font-weight:800;text-align:center;line-height:34px}
+  .ticks{list-style:none;padding:0;margin:14px 0 0}
+  .ticks li{padding:9px 0 9px 32px;position:relative;border-bottom:1px solid var(--line)}
+  .ticks li:before{content:"✓";position:absolute;left:0;top:8px;color:var(--olive);font-weight:900;font-size:19px}
+  .tw{overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:14px;border:1.5px solid var(--line);background:#fff;margin-top:14px}
+  table{border-collapse:collapse;width:100%;font-size:14px;min-width:0;overflow-wrap:normal;word-break:normal}
+  td:first-child,th:first-child{white-space:nowrap}
+  th{background:var(--olive);color:#fff;text-align:left;padding:9px 8px;font-size:12px}
+  td{padding:9px 8px;border-top:1px solid var(--line);vertical-align:top}
+  .two{display:grid;gap:12px}
+  .yes{border-top:5px solid var(--olive)}.no{border-top:5px solid var(--terra)}
+  .price{background:#fff;border:2px solid var(--terra);border-radius:20px;padding:22px 18px;text-align:center;margin-top:16px}
+  .price .big{font-family:Georgia,serif;font-size:46px;font-weight:700;color:var(--terra);line-height:1}
+  .price small{display:block;color:var(--muted);margin-top:6px}
+  .extras{background:var(--soft);border-radius:14px;padding:12px 14px;margin-top:14px;font-size:15px;text-align:left}
+  details{background:#fff;border:1.5px solid var(--line);border-radius:14px;margin:10px 0;padding:0}
+  summary{cursor:pointer;font-weight:800;padding:15px 44px 15px 16px;list-style:none;position:relative}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";position:absolute;right:16px;top:11px;font-size:26px;color:var(--terra);font-weight:700}
+  details[open] summary:after{content:"–"}
+  details p{padding:0 16px 14px;margin:0;color:#3d332d}
+  .guar{display:flex;gap:14px;align-items:center;background:#fff;border:2px solid var(--olive);border-radius:18px;padding:18px;margin-top:14px}
+  .guar>div:last-child{min-width:0}
+  @media (max-width:480px){.guar{flex-direction:column;text-align:center}}
+  .guar .n{flex:0 0 74px;width:74px;height:74px;margin:0 auto;border-radius:50%;background:var(--olive);color:#fff;text-align:center;font:800 28px/1 Georgia,serif;display:flex;flex-direction:column;justify-content:center}
+  .guar .n small{font:700 11px/1.1 "Avenir Next",Arial;letter-spacing:.08em;text-transform:uppercase;margin-top:3px}
+  footer{background:#2B2420;color:#e9dccb;padding:30px 0 20px;font-size:14px}
+  footer a{color:#f3c9bd}
+  .sticky{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1.5px solid var(--line);padding:10px 14px;display:flex;gap:12px;align-items:center;z-index:20}
+  .sticky b{font-family:Georgia,serif;font-size:22px;white-space:nowrap}
+  .sticky .btn{margin:0;padding:13px 12px;font-size:16px;box-shadow:0 4px 0 var(--terra-d)}
+  .img-ill{font-size:12px;color:var(--muted);text-align:center;margin-top:6px}
+  @media (min-width:700px){
+    body{font-size:18px;padding-bottom:0}h1{font-size:46px}h2{font-size:34px}
+    .wrap{max-width:860px}.cards{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr 1fr}
+    .sticky{display:none}.hero .cover{max-width:380px}.btn{max-width:420px;margin-left:auto;margin-right:auto}
+    .micro{text-align:center}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">Pago único · Acceso inmediato · 15 días de garantía</div>
+
+<!-- 1. HERO: promesa (verbo + resultado + tiempo) -->
+<section class="hero">
+  <div class="wrap">
+    <div class="kicker">El método de las 2 tandas</div>
+    <h1>Armá las viandas de toda la semana de tus hijos en una tarde</h1>
+    <p>Cocinás un domingo, en dos tandas, y tenés los 5 días resueltos. Con menús ya armados, listas de compras y planillas para completar en el celu. Con freidora de aire u horno.</p>
+    <a class="btn" href="https://pay.hotmart.com/I108663604Y?checkoutMode=10">Quiero mi guía · $12.990</a>
+    <p class="micro">Pago único · Descarga inmediata · 15 días de garantía</p>
+    <img class="cover" src="img/portada.jpg" alt="Portada de la guía Viandas en una Tarde" width="330" height="587">
+    <ul class="chips">
+      <li>Menús de 4 semanas</li><li>Listas de compras</li><li>6 bonus incluidos</li><li>PDF pensado para el celu</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 2. DOLOR en palabras del cliente -->
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">¿Te suena?</div>
+    <h2>Si te pasa esto, esta guía es para vos</h2>
+    <div class="cards">
+      <div class="card"><b>Son las 11 de la noche y no sabés qué ponerle en la vianda.</b>Terminás haciendo lo mismo de siempre: sándwich, fideos, milanesa.</div>
+      <div class="card"><b>Se te agotaron las ideas.</b>Buscás recetas, pero piden ingredientes raros o una hora de cocina.</div>
+      <div class="card"><b>La vianda vuelve sin tocar.</b>Y encima te queda la culpa. No es falta de ganas: falta un sistema.</div>
+      <div class="card"><b>Las mañanas son una corrida.</b>Y terminás comprando algo de paquete para salir del paso.</div>
+    </div>
+    <a class="btn" href="https://pay.hotmart.com/I108663604Y?checkoutMode=10">Quiero resolver mis viandas · $12.990</a>
+  </div>
+</section>
+
+<!-- 3. MECANISMO -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Cómo funciona</div>
+    <h2>Un domingo, dos tandas y viandas en 3 casilleros</h2>
+    <p>No es un recetario de cientos de recetas: es un plan que decide por vos qué cocinar cada día.</p>
+    <ol class="steps">
+      <li><b>Elegís tu semana (10 minutos).</b> Menú y lista de compras listos. Con una sola compra alcanza.</li>
+      <li><b>Cocinás en 2 tandas.</b> Una base de pollo y otra de huevo o papa, en la freidora o el horno.</li>
+      <li><b>Armás en 3 casilleros.</b> Cada vianda lleva un principal, un acompañamiento y un extra. Lo de los últimos días va al freezer.</li>
+    </ol>
+    <p class="img-ill" style="margin-top:14px">Imágenes de ejemplo. Tu plato puede verse distinto.</p>
+  </div>
+</section>
+
+<!-- 4. QUÉ INCLUYE + MOCKUPS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Qué vas a recibir</div>
+    <h2>Todo lo que incluye</h2>
+    <img src="img/mockups-incluye.png" alt="La guía en tablet, celular y libro, junto a los productos complementarios" width="1200" height="900" style="border-radius:16px">
+    <ul class="ticks">
+      <li><b>La guía "Viandas en una Tarde"</b> en PDF, pensada para leerse en el celu, con índice con botones y campos para completar.</li>
+      <li>El <b>método paso a paso</b> y un ejemplo real en cada capítulo.</li>
+      <li><b>Menús de 4 semanas</b> sin repetir, con lista de compras de cada semana.</li>
+      <li><b>Recetas pensadas para freidora de aire</b>, y una tabla de partida para horno.</li>
+      <li><b>Planner, lista de compras, etiquetas y registro</b> para completar en el celular.</li>
+      <li><b>Calculadora de costo por vianda</b> en Excel.</li>
+    </ul>
+    <a class="btn" href="https://pay.hotmart.com/I108663604Y?checkoutMode=10">Quiero mi guía · $12.990</a>
+  </div>
+</section>
+
+<!-- 5. VISTA PREVIA: Semana 1 real -->
+<section>
+  <div class="wrap">
+    <div class="kicker">Mirá adentro</div>
+    <h2>Así se ve tu Semana 1</h2>
+    <p>Este es el menú real de la primera semana de la guía:</p>
+    <div class="tw"><table>
+      <tr><th>Día</th><th>Principal</th><th>Acompañamiento</th></tr>
+      <tr><td>Lunes</td><td>Nuggets de pollo</td><td>Palitos de zanahoria</td></tr>
+      <tr><td>Martes</td><td>Wrap de pollo y queso</td><td>Pepino en rodajas</td></tr>
+      <tr><td>Miércoles</td><td>Ensalada de pollo y arroz</td><td>Tomates cherry cortados al medio</td></tr>
+      <tr><td>Jueves</td><td>Mini frittatas de verdura</td><td>Palitos de zanahoria</td></tr>
+      <tr><td>Viernes</td><td>Croquetas de papa y queso</td><td>Rodajas de pepino</td></tr>
+    </table></div>
+    <p class="micro" style="margin-top:10px;text-align:left">Cada día suma una fruta como extra. Tiempos y cantidades de referencia.</p>
+  </div>
+</section>
+
+<!-- 6. BONUS -->
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Incluidos</div>
+    <h2>6 bonus que resuelven las dudas de siempre</h2>
+    <div class="cards">
+      <div class="card"><b>Plan B: 10 clásicos</b>Una salida cuando la vianda vuelve sin tocar: nuggets, milanesitas, papas y más.</div>
+      <div class="card"><b>Guía de freezer y recalentado</b>Qué se congela, cómo etiquetar y qué se come frío (para colegios sin microondas).</div>
+      <div class="card"><b>Súper semanal</b>Lista de compras con alternativas más baratas por ingrediente.</div>
+      <div class="card"><b>Listas de arranque y de prueba</b>Tu primera vianda con la freidora, y cómo probar una receta nueva en casa.</div>
+      <div class="card"><b>Versión horno</b>Tabla de partida para cocinar las recetas sin freidora.</div>
+      <div class="card"><b>Calculadora de costo</b>Cuánto sale cada vianda, con tus propios precios.</div>
+    </div>
+    <a class="btn" href="https://pay.hotmart.com/I108663604Y?checkoutMode=10">Quiero la guía y los 6 bonus · $12.990</a>
+  </div>
+</section>
+
+<!-- 7. PARA QUIÉN SÍ / NO -->
+<section>
+  <div class="wrap">
+    <h2>¿Es para vos?</h2>
+    <div class="two">
+      <div class="card yes"><b>Es para vos si…</b>
+        <ul class="ticks"><li>Armás la vianda del cole todas las semanas.</li><li>Querés ordenarte con una sola tarde de cocina.</li><li>Tenés freidora de aire o un horno común.</li><li>Preferís ideas simples a recetas largas.</li></ul></div>
+      <div class="card no"><b>No es para vos si…</b>
+        <p style="margin-top:8px">• Buscás un plan de salud o de nutrición personalizado.<br>• Esperás que tus hijos coman todo: no lo prometemos.<br>• Tu hijo tiene menos de 5 años y querés recetas de carne picada: el SENASA recomienda evitarla a esa edad (la guía tiene opciones con pollo).</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. POR QUÉ CONFIAR (sin testimonios inventados) -->
+<section class="alt">
+  <div class="wrap">
+    <div class="kicker">Hecha con cuidado</div>
+    <h2>Por qué podés confiar en esta guía</h2>
+    <ul class="ticks">
+      <li>Los plazos y cuidados de conservación y cocción están contrastados con <b>recomendaciones oficiales de ANMAT y SENASA</b>, con las fuentes dentro de la guía.</li>
+      <li>Las recetas están pensadas para <b>ingredientes que se consiguen en cualquier supermercado</b>.</li>
+      <li>Si no te sirve, tenés <b>15 días de garantía</b> y soporte por mail.</li>
+      <li>Autor: <b>Munne Corporation</b>.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 9. PRECIO -->
+<section id="comprar">
+  <div class="wrap">
+    <div class="kicker">Tu acceso</div>
+    <h2>Un solo pago, para siempre</h2>
+    <div class="price">
+      <div class="big">$12.990</div>
+      <small>pesos argentinos · pago único · sin suscripción</small>
+      <small>Si pagás desde otro país, Hotmart muestra el precio convertido a tu moneda.</small>
+      <a class="btn" href="https://pay.hotmart.com/I108663604Y?checkoutMode=10">Comprar ahora</a>
+      <div class="extras"><b>Al pagar, podés sumar (opcional):</b><br>• Pack imprimible A4 · $3.490<br>• Meriendas y recreo · $6.990</div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. GARANTÍA -->
+<section class="alt">
+  <div class="wrap">
+    <h2>Probala 15 días, sin riesgo</h2>
+    <div class="guar">
+      <div class="n">15<small>días</small></div>
+      <div>Probá la guía durante 15 días. Si no te sirve, escribinos y te devolvemos tu dinero.<br><b style="font-size:15px">munnecorporation@outlook.es</b></div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. FAQ: objeciones -->
+<section>
+  <div class="wrap">
+    <h2>Preguntas frecuentes</h2>
+    <details><summary>¿Mis hijos van a comer todo?</summary><p>No lo prometemos, porque cada chico es distinto. Por eso la guía trae un Plan B con 10 clásicos y una hoja para probar una vianda nueva en casa antes de mandarla.</p></details>
+    <details><summary>¿Necesito freidora de aire?</summary><p>Las recetas están pensadas para freidora. Si usás horno común, incluimos el Bonus "Versión horno" con una tabla de partida y un espacio para anotar tu propio tiempo.</p></details>
+    <details><summary>¿Se puede congelar? ¿Y si el colegio no tiene microondas?</summary><p>Sí. El Bonus de freezer te dice qué se congela y cómo. Para colegios sin microondas, hay opciones que se comen frías, siempre con hielo gel.</p></details>
+    <details><summary>¿Los ingredientes son caros?</summary><p>Son de supermercado. Incluimos una lista de compras por semana con alternativas más baratas y una calculadora para ver cuánto sale cada vianda con tus precios.</p></details>
+    <details><summary>¿Sirve para chicos de cualquier edad?</summary><p>Está pensada para edad escolar. Para menores de 5 años, el SENASA recomienda evitar la carne picada: la guía lo avisa y propone la base de pollo. Consultá siempre con tu pediatra y verificá alergias y reglas del colegio.</p></details>
+    <details><summary>¿Es un plan de salud o de nutrición?</summary><p>No. Es una guía de ideas de cocina y organización para el hogar. No reemplaza la consulta con un pediatra o un nutricionista.</p></details>
+    <details><summary>¿Cómo la recibo?</summary><p>Es un producto digital. Al pagar, recibís un mail de Hotmart con el acceso. Si no lo ves, revisá spam o escribinos.</p></details>
+    <details><summary>¿Es un pago mensual?</summary><p>No. Es un pago único, sin suscripción.</p></details>
+    <details><summary>¿Y si algo no funciona?</summary><p>Escribinos a munnecorporation@outlook.es y respondemos en un plazo de 48 horas hábiles.</p></details>
+  </div>
+</section>
+
+<!-- 12. CTA FINAL -->
+<section class="alt">
+  <div class="wrap" style="text-align:center">
+    <h2>Que la vianda deje de ser un problema</h2>
+    <p>Elegí tu semana hoy y cociná el domingo.</p>
+    <a class="btn" href="https://pay.hotmart.com/I108663604Y?checkoutMode=10">Quiero mis viandas resueltas · $12.990</a>
+    <p class="micro">Pago único · Acceso inmediato · 15 días de garantía</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><b>Munne Corporation</b> · munnecorporation@outlook.es</p>
+    <p>Esta guía es informativa y reúne ideas de cocina y organización para el hogar. No es un plan de salud ni de nutrición y no reemplaza la consulta con un pediatra o un licenciado en nutrición. Cada familia es responsable de verificar alergias y restricciones. Los tiempos y temperaturas son de referencia.</p>
+    <p>Fuentes de seguridad alimentaria: <a href="https://www.argentina.gob.ar/senasa/alimentos/articulos/como-guardar-los-alimentos-en-la-heladera">ANMAT/SENASA</a>. © 2026 Munne Corporation.</p>
+  </div>
+</footer>
+
+<div class="sticky"><b>$12.990</b><a class="btn" href="https://pay.hotmart.com/I108663604Y?checkoutMode=10">Comprar ahora</a></div>
+
+</body>
+</html>
