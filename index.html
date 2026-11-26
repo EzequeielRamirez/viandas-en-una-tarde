@@ -77,7 +77,7 @@
 fbq('init','1094862196921203');
 fbq('track','PageView');
 fbq('track','ViewContent',{content_name:'Que Le Mando Manana',currency:'ARS',value:12990});
-document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="pay.hotmart.com"]');if(a){fbq('track','InitiateCheckout',{content_name:'Que Le Mando Manana',currency:'ARS',value:12990});}},true);
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="pay.hotmart.com"]');if(a){fbq('trackCustom','ClickComprar',{content_name:'Que Le Mando Manana'});}},true);
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1094862196921203&ev=PageView&noscript=1"/></noscript>
 <!-- End Meta Pixel -->
